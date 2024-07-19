@@ -7,6 +7,10 @@ const cors = require('cors');
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.status(200).send('Nothing to do here...');
+});
+
 app.get('/info', (req, res) => {
     service.getInfo(req, res);
 });
