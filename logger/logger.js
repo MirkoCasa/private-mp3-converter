@@ -3,7 +3,7 @@ const winston = require('winston');
 const { combine, timestamp, label, printf, colorize } = winston.format;
 
 const getLabel = () => {
-    return require('./package.json').name;
+    return require('../package.json').name;
 }
 
 const customFormat = printf(({ level, message, label, timestamp }) => {

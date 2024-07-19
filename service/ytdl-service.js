@@ -1,5 +1,5 @@
 const ytdl = require('@distube/ytdl-core');
-const options = require(process.env.OPTIONS_PATH);
+const options = require('../config/options.json');
 const { VideoNotFoundError, MissingUrlError, DownloadError } = require('../error/errors');
 const logger = require('../logger/logger');
 
