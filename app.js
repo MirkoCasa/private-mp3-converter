@@ -6,6 +6,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors());
+const port = process.env.PORT;
 
 app.get('/', (req, res) => {
     res.status(200).send('Nothing to do here...');
@@ -19,6 +20,6 @@ app.get('/download', (req, res) => {
     service.downloadAudio(req, res);
 });
 
-app.listen(process.env.PORT, () => {
-    logger.info(`[app] Server is running on port ${process.env.PORT}`);
+app.listen(port, () => {
+    logger.info(`Server is running on port ${port}`);
 });
